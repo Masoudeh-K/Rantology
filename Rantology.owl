@@ -1,0 +1,3350 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#"
+     xml:base="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-48="http://www.semanticweb.org/xen/ontologies/2024/8/untitled-ontology-48#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rantology is a dedicated ontology of digital extortions with a particular focus on ransomware assaults. It is a domain ontology that incorporates concepts related to the scope of cyber extortion attacks. Rantology contains all the entities associated with fear-based malware and digital blackmailers, various types of ransomware, system calls, ransom and payment methods, cyber threat actors, and other agents involved in this realm.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Masoudeh Keshavarzi
+Email: masoudeh_k@yahoo.com</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rantology (Ransomware Ontology)</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.sciencedirect.com/science/article/pii/S0747563222003405</rdfs:seeAlso>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasBehavior -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasBehavior">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#isBehaviorOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Software"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Behavior"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasCalled -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasCalled">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#isCalledBy"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Software"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#OperatingSystemAPI"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasConnectedTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasConnectedTo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Malware"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#C2Server"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasDemandedPaymentIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasDemandedPaymentIn">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#isPaymentMethodOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Leakware"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Ransomware"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#PaymentSystem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasDeveloper -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasDeveloper">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#isDeveloperOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Goodware"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#SoftwareDeveloper"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasExploited -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasExploited">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#isExploitedBy"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Malware"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Vulnerability"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasFounder -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasFounder">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Digitalcurrency"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CyberActor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasMember -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasMember">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#isMemberOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ThreatGroup"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasProducer -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasProducer">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#isProducerOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Malware"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Attacker"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasRansomNote -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasRansomNote">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Leakware"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Ransomware"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#RansomNoteFile"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasString -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasString">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Leakware"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Ransomware"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ThreateningMessage"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasTargeted -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasTargeted">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#isTargetedBy"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Malware"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Victim"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasUsed -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasUsed">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#isUsedBy"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ThreatGroup"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ThreatComponent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasVulnerability -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasVulnerability">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Software"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Vulnerability"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#isBehaviorOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#isBehaviorOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Behavior"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Software"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#isCalledBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#isCalledBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#OperatingSystemAPI"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Software"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#isDeveloperOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#isDeveloperOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#SoftwareDeveloper"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Goodware"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#isDisclosedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#isDisclosedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Vulnerability"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CyberActor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#isDistributedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#isDistributedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Malware"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ExploitKit"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Malware"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#SpamEmailCampaign"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#isExploitedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#isExploitedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Vulnerability"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Malware"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#isInvolvedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#isInvolvedIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ThreatComponent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Malware"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#isMemberOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#isMemberOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ThreatGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#isPaymentMethodOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#isPaymentMethodOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#PaymentSystem"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Leakware"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Ransomware"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#isProducerOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#isProducerOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Attacker"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Malware"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#isRelatedTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#isRelatedTo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#WindowsAPI"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Behavior"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#isTargetedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#isTargetedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Victim"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Malware"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#isUsedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#isUsedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ThreatComponent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ThreatGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasAnonymity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasAnonymity">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#PaymentSystem"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasAuthentihash -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasAuthentihash">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Software"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasBaseScore -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasBaseScore">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Vulnerability"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasBeenActivatedSince -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasBeenActivatedSince">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ThreatGroup"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasBeenShutdownedIn -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasBeenShutdownedIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ThreatGroup"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasCitizenship -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasCitizenship">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasCountry -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasCountry">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CyberActor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasDLL -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasDLL">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#WindowsAPI"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasDecryptor -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasDecryptor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CryptoRansomware"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasEncryptionAlgorithm -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasEncryptionAlgorithm">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CryptoRansomware"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasFileName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasFileName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Software"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasFileSize -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasFileSize">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Software"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasFirstName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasFirstName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasGender -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasGender">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasHashAlgorithm -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasHashAlgorithm">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Cryptocurrency"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasHeader -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasHeader">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#WindowsAPI"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasIP -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasIP">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#C2Server"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#SpamEmailCampaign"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasImphash -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasImphash">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Software"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasLastName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasLastName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasLibrary -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasLibrary">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#WindowsAPI"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasMD5Hash -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasMD5Hash">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Software"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasMultiHopProxy -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasMultiHopProxy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#C2Server"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CyberActor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasNationality -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasNationality">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasPlatform -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasPlatform">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Software"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>Android</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>Linux</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>Mac OS X</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first>UNIX</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first>Windows 32-bit</rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first>Windows 64-bit</rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasProgrammingLanguageOfImplementation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasProgrammingLanguageOfImplementation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Cryptocurrency"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasRansomValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasRansomValue">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Leakware"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Ransomware"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasReleaseDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasReleaseDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Software"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasSHA-1 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasSHA-1">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Software"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasSHA256Hash -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasSHA256Hash">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Software"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasSSDEEP -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasSSDEEP">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Software"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasStealingInfoCapability -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasStealingInfoCapability">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Ransomware"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasSymbol -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasSymbol">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Digitalcurrency"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasTLSH -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasTLSH">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Software"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasTraceability -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasTraceability">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#PaymentSystem"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasURL -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasURL">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#C2Server"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ExploitKit"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#SpamEmailCampaign"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasVersion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasVersion">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Software"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasVhash -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasVhash">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Software"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasWarningMessage -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasWarningMessage">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#RansomNoteFile"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasWebsite -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasWebsite">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Organization"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#AIDSInformationTrojan -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#AIDSInformationTrojan">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CryptoRansomware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Adware -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Adware">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Malware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Angler -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Angler">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ExploitKit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Annabelle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Annabelle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#AnonPop -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#AnonPop">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#WiperRansomware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ApplicationLocker -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ApplicationLocker">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#LockerRansomware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Archievus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Archievus">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ArchiverSoftware -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ArchiverSoftware">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Goodware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Attacker -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Attacker">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#isProducerOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Malware"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CyberActor"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In Rantology one assumes that an attacker produces a malware or uses specific threat components in cyber attacks.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Avaddon -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Avaddon">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#BackupFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#BackupFunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#FileManagement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#BackupSoftware -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#BackupSoftware">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Goodware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#BadRabbit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#BadRabbit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#BankingTrojan -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#BankingTrojan">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Malware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Bart -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Bart">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Behavior -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Behavior"/>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#BigHead -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#BigHead">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#BitPaymer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#BitPaymer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Bitcoin -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Bitcoin">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Cryptocurrency"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Bl00dy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Bl00dy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#BlackCat -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#BlackCat">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#BlackHole -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#BlackHole">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ExploitKit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#BlackMatter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#BlackMatter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Bootkit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Bootkit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Malware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Botnet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Botnet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ThreatComponent"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A botnet refers to a group of computers which have been infected by malware and have come under the control of a malicious actor.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Botnet</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Brolo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Brolo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#BrowserLocker"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Browlock -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Browlock">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#BrowserLocker"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#BrowserLocker -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#BrowserLocker">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ApplicationLocker"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Bucbi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Bucbi">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#C2Server -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#C2Server">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ThreatComponent"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A command-and-control [C&amp;C or C2] server is a computer controlled by an attacker or cybercriminal which is used to send commands to systems compromised by malware.</rdfs:comment>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#C2Server"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A command-and-control [C&amp;C or C2] server is a computer controlled by an attacker or cybercriminal which is used to send commands to systems compromised by malware.</owl:annotatedTarget>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#language">EN</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CL0P -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CL0P">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CTB-Locker -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CTB-Locker">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Calelk -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Calelk">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CashVoucherSystem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CashVoucherSystem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#PaymentSystem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Cerber -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Cerber">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Charger -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Charger">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Clop -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Clop">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Communication -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Communication">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#WindowsAPI"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ConsoleFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ConsoleFunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#DeviceManagement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Conti -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Conti">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CreateDesktopFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CreateDesktopFunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ConsoleFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CreateFileFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CreateFileFunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#FileManagement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CreateProcessFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CreateProcessFunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ProcessThreadFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CreatingReg -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CreatingReg">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#RegistryBehavior"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Critroni -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Critroni">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CryLocker -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CryLocker">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CryptFIle2 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CryptFIle2">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CryptXXX -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CryptXXX">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CryptoJoker -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CryptoJoker">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CryptoLocker -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CryptoLocker">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CryptoRansomware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CryptoRansomware -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CryptoRansomware">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Ransomware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CryptoWall -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CryptoWall">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Cryptocurrency -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Cryptocurrency">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Digitalcurrency"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CryptographicSoftware -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CryptographicSoftware">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Goodware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Crysis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Crysis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Cuba -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Cuba">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CyberActor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CyberActor">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CyberActor is a participant (person or group) in an action or process using computers, devices, systems, or networks.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#DGA -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#DGA">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ThreatComponent"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Domain generation algorithms (DGA) are algorithms seen in various families of malware that are used to periodically generate a large number of domain names that can be used as rendezvous points with their command and control servers.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Domain_generation_algorithm</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#DLLInjectingBehavior -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#DLLInjectingBehavior">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Behavior"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#DarkSide -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#DarkSide">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Darma -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Darma">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Dash -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Dash">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Cryptocurrency"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#DataAccessFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#DataAccessFunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#FileManagement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#DefineDosDeviceFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#DefineDosDeviceFunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#DataAccessFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#DeleteFileFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#DeleteFileFunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#FileManagement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#DeleteVolumeMountPointFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#DeleteVolumeMountPointFunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#DataAccessFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#DeletingFileBehavior -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#DeletingFileBehavior">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Behavior"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#DeletingReg -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#DeletingReg">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#RegistryBehavior"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#DeletingVSSBehavior -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#DeletingVSSBehavior">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Behavior"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#DenyingAccessBehavior -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#DenyingAccessBehavior">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Behavior"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#DeriaLock -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#DeriaLock">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#DeviceManagement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#DeviceManagement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#WindowsAPI"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Diavol -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Diavol">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Digitalcurrency -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Digitalcurrency">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#PaymentSystem"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Digital currency (digital money, electronic money or electronic currency) is any currency, money, or money-like asset that is primarily managed, stored or exchanged on digital computer systems, especially over the internet.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Dogecoin -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Dogecoin">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Cryptocurrency"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#DoppelPaymer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#DoppelPaymer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Dridex -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Dridex">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#BankingTrojan"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Egregor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Egregor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ExploitKit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ExploitKit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ThreatComponent"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An exploit kit is a tool used for automatically managing and deploying exploits against a target computer.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Exploit_kit</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Fiesta -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Fiesta">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ExploitKit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#FileManagement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#FileManagement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#WindowsAPI"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#FileSystemBehavior -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#FileSystemBehavior">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Behavior"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#FindWindowFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#FindWindowFunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#WindowsAndMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#FlashPack -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#FlashPack">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ExploitKit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Fonix -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Fonix">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#GPCode -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#GPCode">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#GameoverZeuS -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#GameoverZeuS">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Botnet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#GandCrab -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#GandCrab">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#GermanWiper -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#GermanWiper">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#WiperRansomware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#GetModuleHandleFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#GetModuleHandleFunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ProcessControl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#GiftCard -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#GiftCard">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#PaymentSystem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#GlobeImposter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#GlobeImposter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#GoldenEye -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#GoldenEye">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Goodware -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Goodware">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Software"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Gridcoin -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Gridcoin">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Cryptocurrency"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#HDDCryptor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#HDDCryptor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#HanJuan -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#HanJuan">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ExploitKit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Hive -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Hive">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Hunter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Hunter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ExploitKit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ITManagement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ITManagement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#InformationMaintenance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#InformationMaintenance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#WindowsAPI"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#InformationTechnology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#InformationTechnology">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#InternetConnectFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#InternetConnectFunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Communication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#JCry -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#JCry">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Jaff -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Jaff">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Jigsaw -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Jigsaw">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CryptoRansomware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Kelihos -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Kelihos">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Botnet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Krypterade -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Krypterade">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#BrowserLocker"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Leakware -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Leakware">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Scareware"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Leakware, also known as Doxware, is a new evolution of digital hijacking and cyber extortion. Unlike ransomware, leakware does not prevent users from accessing their legal resources, but instead threatens to make public the personal and sensitive data of the victims if they do not pay a ransom.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Litecoin -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Litecoin">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Cryptocurrency"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#LockBit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#LockBit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Lockdroid -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Lockdroid">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#LockerGoga -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#LockerGoga">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#WiperRansomware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#LockerRansomware -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#LockerRansomware">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Ransomware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Locky -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Locky">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#MBR-ONI -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#MBR-ONI">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#WiperRansomware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Magnitude -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Magnitude">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ExploitKit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Malware -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Malware">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Software"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Mamba -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Mamba">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ManagedFileTransferSoftware -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ManagedFileTransferSoftware">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Goodware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#MarsJoke -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#MarsJoke">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Maze -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Maze">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CryptoRansomware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#MedusaLocker -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#MedusaLocker">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#MemoryFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#MemoryFunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#DeviceManagement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Mischa -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Mischa">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ModifyingMBRBehavior -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ModifyingMBRBehavior">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Behavior"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Monero -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Monero">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Cryptocurrency"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#MoveFileFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#MoveFileFunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#FileManagement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Namecoin -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Namecoin">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Cryptocurrency"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Necurs -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Necurs">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Botnet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Nemty -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Nemty">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#NetWalker -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#NetWalker">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#NetworkBehavior -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#NetworkBehavior">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Behavior"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#NetworkFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#NetworkFunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Communication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Neutrino -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Neutrino">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ExploitKit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#NormalBehavior -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#NormalBehavior">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Behavior"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#NotPetya -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#NotPetya">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#WiperRansomware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Nuclear -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Nuclear">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ExploitKit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ObjectFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ObjectFunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ProcessControl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#OnlinePaymentService -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#OnlinePaymentService">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#PaymentSystem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#OperatingSystemAPI -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#OperatingSystemAPI"/>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#OphionLocker -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#OphionLocker">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Ordinypt -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Ordinypt">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#WiperRansomware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Organization -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Organization">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CyberActor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#POSIXAPI -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#POSIXAPI">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#OperatingSystemAPI"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#PadCrypt -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#PadCrypt">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Paycrypt -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Paycrypt">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#PaymentSystem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#PaymentSystem"/>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Paysafecard -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Paysafecard">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CashVoucherSystem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Peercoin -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Peercoin">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Cryptocurrency"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#PersistenceBehavior -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#PersistenceBehavior">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Behavior"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Person">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CyberActor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#PetWrap -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#PetWrap">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#WiperRansomware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Petya -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Petya">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Phobos -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Phobos">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#PowerFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#PowerFunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#DeviceManagement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Primecoin -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Primecoin">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Cryptocurrency"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ProcessBehavior -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ProcessBehavior">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Behavior"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ProcessControl -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ProcessControl">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#WindowsAPI"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ProcessThreadFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ProcessThreadFunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ProcessControl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ProfessionalServices -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ProfessionalServices">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Protection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Protection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#WindowsAPI"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Pysa -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Pysa">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#QueryingReg -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#QueryingReg">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#RegistryBehavior"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#RAA -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#RAA">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#RAT -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#RAT">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Malware"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Remote Access Trojan</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#REvil -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#REvil">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sodinokibi</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#RIG -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#RIG">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ExploitKit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#RagnarLocker -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#RagnarLocker">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#RanRan -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#RanRan">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Ransoc -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Ransoc">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#BrowserLocker"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Ransom32 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Ransom32">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#RansomCrypt -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#RansomCrypt">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#RansomNoteFile -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#RansomNoteFile">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ThreatComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Ransomware -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Ransomware">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Scareware"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasBehavior"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ShowingRansomNoteBehavior"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasRansomNote"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#RansomNoteFile"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasString"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ThreateningMessage"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasBehavior"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#DenyingAccessBehavior"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Scareware"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ransomware is a type of malware that blocks users access to their resource, whether data or non-data, with the intent of extortion.</rdfs:comment>
+        <rdfs:label xml:lang="en">Ransomware</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.sciencedirect.com/science/article/abs/pii/S1574013719300838</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ReadingReg -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ReadingReg">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#RegistryBehavior"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#RedEye -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#RedEye">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#RegCreateKeyFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#RegCreateKeyFunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#RegistryFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#RegEnumValueFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#RegEnumValueFunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#RegistryFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#RegSettingKey -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#RegSettingKey">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CreatingReg"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#RegSettingValue -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#RegSettingValue">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CreatingReg"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#RegistryBehavior -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#RegistryBehavior">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Behavior"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#RegistryFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#RegistryFunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#InformationMaintenance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Reveton -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Reveton">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ScreenLocker"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Ripple -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Ripple">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Cryptocurrency"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Rogueware -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Rogueware">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Scareware"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rogueware or Rogue security software is a deceitful program that pretends to be anti-spyware or legitimate system utility, but in fact being malicious software itself.</rdfs:comment>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Rogueware"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rogueware or Rogue security software is a deceitful program that pretends to be anti-spyware or legitimate system utility, but in fact being malicious software itself.</owl:annotatedTarget>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.sciencedirect.com/science/article/abs/pii/S1574013719300838</rdfs:seeAlso>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Rootkit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Rootkit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Malware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Ryuk -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Ryuk">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#SamSam -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#SamSam">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Santa -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Santa">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Scareware -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Scareware">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Malware"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.sciencedirect.com/science/article/abs/pii/S1574013719300838</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ScreenLocker -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ScreenLocker">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#LockerRansomware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#SecurityFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#SecurityFunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Protection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Seftad -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Seftad">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ShowingRansomNoteBehavior -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ShowingRansomNoteBehavior">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Behavior"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#SimpLocker -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#SimpLocker">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Software -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Software">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Software is a set of instructions, data or programs used to operate computers and execute specific tasks.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#SoftwareDeveloper -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#SoftwareDeveloper">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#isDeveloperOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Goodware"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CyberActor"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In Rantology one assumes that a software developer only develops a goodware.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#SpamEmailCampaign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#SpamEmailCampaign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ThreatComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Spyware -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Spyware">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Malware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#SunCrypt -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#SunCrypt">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Sundown -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Sundown">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ExploitKit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#SuspiciousBehavior -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#SuspiciousBehavior">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Behavior"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#SweetOrange -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#SweetOrange">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ExploitKit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#SynAck -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#SynAck">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#SynchronizationFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#SynchronizationFunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ProcessControl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#SysInfoFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#SysInfoFunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#InformationMaintenance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#SystemParametersInfoFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#SystemParametersInfoFunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#WindowsAndMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#TeslaCrypt -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#TeslaCrypt">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Thanos -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Thanos">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CryptoRansomware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ThreatComponent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ThreatComponent"/>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ThreatGroup -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ThreatGroup">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Attacker"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ThreateningMessage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ThreateningMessage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ThreatComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#TimerFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#TimerFunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#InformationMaintenance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Tobfy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Tobfy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#TorrentLocker -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#TorrentLocker">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#TraditionalFinancialSystem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#TraditionalFinancialSystem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#PaymentSystem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Trojan.Ransomlock.G -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Trojan.Ransomlock.G">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Troldesh -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Troldesh">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Ukash -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Ukash">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CashVoucherSystem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UndefinedClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UndefinedClass -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UndefinedClass"/>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Urausy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Urausy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ScreenLocker"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Victim -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Victim">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#isTargetedBy"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Malware"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CyberActor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#VirLock -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#VirLock">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Virtualcurrency -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Virtualcurrency">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Digitalcurrency"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A central bank digital currency (CBDC; also called digital fiat currency or digital base money) is a digital currency issued by a central bank, rather than by a commercial bank.</rdfs:comment>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Virtualcurrency"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A central bank digital currency (CBDC; also called digital fiat currency or digital base money) is a digital currency issued by a central bank, rather than by a commercial bank.</owl:annotatedTarget>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CBDC</rdfs:label>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Virus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Virus">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Malware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Vulnerability -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Vulnerability">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ThreatComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Wadhrama -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Wadhrama">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#WannaCry -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#WannaCry">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#WiperRansomware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#WastedLocker -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#WastedLocker">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Wildfire -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Wildfire">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#WinLock -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#WinLock">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ScreenLocker"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#WindowsAPI -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#WindowsAPI">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#OperatingSystemAPI"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#WindowsAndMessage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#WindowsAndMessage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#InformationMaintenance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Wiper -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Wiper">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Malware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#WiperRansomware -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#WiperRansomware">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Ransomware"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#hasBehavior"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#DeletingFileBehavior"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WiperRansomware is a kind of ransomware aimed at preventing access to data resources, which will not return the hostage data even after the ransom has been paid by the victim.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Worm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Worm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Malware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ZCryptor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ZCryptor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Ziggy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Ziggy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UncategorizedRansomwareFamily"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#AdjustTokenGroups -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#AdjustTokenGroups">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#SecurityFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CVE-2017-0144 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CVE-2017-0144">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Vulnerability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CVE-2023-34362 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CVE-2023-34362">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Vulnerability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CreateDesktopA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CreateDesktopA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CreateDesktopFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CreateDesktopExA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CreateDesktopExA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CreateDesktopFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CreateDesktopExW -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CreateDesktopExW">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CreateDesktopFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CreateDesktopW -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CreateDesktopW">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CreateDesktopFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CreateFileA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CreateFileA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CreateFileFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CreateFileW -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CreateFileW">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CreateFileFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CreateProcessA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CreateProcessA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CreateProcessFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CreateProcessW -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CreateProcessW">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CreateProcessFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CreateRemoteThread -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CreateRemoteThread">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ProcessThreadFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CreateToolhelp32Snapshot -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CreateToolhelp32Snapshot">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ProcessControl"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#DefineDosDeviceW -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#DefineDosDeviceW">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#DefineDosDeviceFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#DeleteFileA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#DeleteFileA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#DeleteFileFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#DeleteFileW -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#DeleteFileW">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#DeleteFileFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#DeleteVolumeMountPointW -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#DeleteVolumeMountPointW">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#DeleteVolumeMountPointFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#DuplicateToken -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#DuplicateToken">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#SecurityFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#EvilCorp -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#EvilCorp">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ThreatGroup"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#IndrikSpider"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ExitProcess -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ExitProcess">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ProcessThreadFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ExitThread -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ExitThread">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ProcessThreadFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#FIN7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#FIN7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ThreatGroup"/>
+        <hasBeenActivatedSince rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2013</hasBeenActivatedSince>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#FindWindowA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#FindWindowA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#FindWindowFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#FindWindowExA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#FindWindowExA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#FindWindowFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#FindWindowExW -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#FindWindowExW">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#FindWindowFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#FindWindowW -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#FindWindowW">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#FindWindowFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#FlushFileBuffers -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#FlushFileBuffers">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#DataAccessFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#GetCurrentProcess -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#GetCurrentProcess">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ProcessThreadFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#GetKernelObjectSecurity -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#GetKernelObjectSecurity">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#SecurityFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#GetModuleHandleA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#GetModuleHandleA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#GetModuleHandleFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#GetModuleHandleExA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#GetModuleHandleExA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#GetModuleHandleFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#GetModuleHandleExW -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#GetModuleHandleExW">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#GetModuleHandleFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#GetModuleHandleW -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#GetModuleHandleW">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#GetModuleHandleFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#GetProcessInformation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#GetProcessInformation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#InformationMaintenance"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ProcessControl"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#GetSystemPowerStatus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#GetSystemPowerStatus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#PowerFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#GetTickCount -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#GetTickCount">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#SysInfoFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#GetWindowThreadProcessId -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#GetWindowThreadProcessId">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#WindowsAndMessage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#GlobalLock -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#GlobalLock">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#MemoryFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#GlobalReAlloc -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#GlobalReAlloc">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#MemoryFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#IndrikSpider -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#IndrikSpider">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ThreatGroup"/>
+        <hasBeenActivatedSince rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2014</hasBeenActivatedSince>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#InternetConnectA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#InternetConnectA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#InternetConnectFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#InternetConnectW -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#InternetConnectW">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#InternetConnectFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#IsVolumeSnapshotted -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#IsVolumeSnapshotted">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#BackupFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#MoveFileA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#MoveFileA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#MoveFileFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#MoveFileExA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#MoveFileExA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#MoveFileFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#MoveFileExW -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#MoveFileExW">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#MoveFileFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#MoveFileW -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#MoveFileW">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#MoveFileFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#NetApiBufferSize -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#NetApiBufferSize">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#NetworkFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#OpenProcess -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#OpenProcess">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ProcessControl"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#PinchySpider -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#PinchySpider">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ThreatGroup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Process32First -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Process32First">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ProcessControl"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Process32Next -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Process32Next">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ProcessControl"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Qiwi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Qiwi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#OnlinePaymentService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#RegCreateKeyA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#RegCreateKeyA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#RegCreateKeyFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#RegCreateKeyExA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#RegCreateKeyExA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#RegCreateKeyFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#RegCreateKeyExW -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#RegCreateKeyExW">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#RegCreateKeyFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#RegCreateKeyW -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#RegCreateKeyW">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#RegCreateKeyFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#RegEnumValueA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#RegEnumValueA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#RegEnumValueFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#RegEnumValueW -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#RegEnumValueW">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#RegEnumValueFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#SendMessage -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#SendMessage">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#WindowsAndMessage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#SetProcessInformation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#SetProcessInformation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ProcessThreadFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#SetTimer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#SetTimer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#TimerFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#SetUserObjectSecurity -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#SetUserObjectSecurity">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#SecurityFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#SunCrypt -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#SunCrypt">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ThreatGroup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#SystemParametersInfoA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#SystemParametersInfoA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#SystemParametersInfoFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#SystemParametersInfoW -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#SystemParametersInfoW">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#SystemParametersInfoFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UNC1878 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#UNC1878">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ThreatGroup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ViceSociety -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ViceSociety">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ThreatGroup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#WSAConnect -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#WSAConnect">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Communication"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#WinINet -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#WinINet">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#NetworkFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#WizardSpider -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#WizardSpider">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ThreatGroup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Yandex -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Yandex">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#OnlinePaymentService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#21a563f958b73d453ad91e251b11855c -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#21a563f958b73d453ad91e251b11855c">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Maze"/>
+        <hasEncryptionAlgorithm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RSA-2048</hasEncryptionAlgorithm>
+        <hasFileName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maze</hasFileName>
+        <hasFileSize rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">754176</hasFileSize>
+        <hasStealingInfoCapability rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasStealingInfoCapability>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Behavior"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CyberActor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#OperatingSystemAPI"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#PaymentSystem"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Software"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#Behavior"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#CyberActor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#OperatingSystemAPI"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#PaymentSystem"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/xen/ontologies/2024/8/Rantology#ThreatComponent"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
